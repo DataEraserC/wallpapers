@@ -33,6 +33,8 @@ def potential_names_without_number_end(filename):
 def test_potential_names_without_number_end():
     test_cases = [
         ("file(1).txt", ["file.txt"]),
+        ("(1)file.txt", ["(1)file.txt"]),
+        ("(1) file.txt", ["(1) file.txt"]),
         (" file(1).txt", [" file.txt"]),
         ("file(1)", ["file"]),
         (" file (1).txt", [" file.txt", " file .txt"]),
